@@ -2,7 +2,7 @@ import numpy as np
 from xp_helpers import multiprocess_MC_Xtreme
 
 path = "xp"
-m = 100  # Number of trajectories in each simulation!
+m = 100  # Number of trajectories in each simulation! m=10000 in the paper's experiments
 
 params = {'MoMax_SDA': {'fe': lambda x: max(5, np.sqrt(x)), 'batch_size': lambda n: np.sqrt(n)},
           'ExtremeETC': {'b': 1}, 'ExtremeHunter': {'steps': 1000, 'D': 1e-4, 'E': 1e-4, 'b': 1},
